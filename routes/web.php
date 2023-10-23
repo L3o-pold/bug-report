@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/video', function () {
+    return response()->download(
+        resource_path('videos/TSU_640x360.mp4')
+    );
+});
